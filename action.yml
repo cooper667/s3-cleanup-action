@@ -1,0 +1,9 @@
+name: "S3 Cleanup"
+description: "Remove an S3 Bucket"
+author: cooper667
+runs:
+  using: docker
+  image: Dockerfile
+branding:
+  icon: refresh-cw
+  color: green
