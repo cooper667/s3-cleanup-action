@@ -38,7 +38,7 @@ text
 EOF
 
 echo ${AWS_S3_BUCKET}
-aws s3 rm s3://${AWS_S3_BUCKET} --recursive --profile s3-sync-action || aws s3api delete-bucket --bucket ${AWS_S3_BUCKET} --profile s3-sync-action
+aws s3 rm s3://${AWS_S3_BUCKET} --recursive --profile s3-sync-action && aws s3api delete-bucket --bucket ${AWS_S3_BUCKET} --profile s3-sync-action
 
 # Clear out credentials after we're done.
 # We need to re-run `aws configure` with bogus input instead of
